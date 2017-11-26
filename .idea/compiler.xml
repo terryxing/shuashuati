@@ -22,10 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="terry-leetcode" />
         <module name="terry-lintcode" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="terry-leetcode" target="1.5" />
       <module name="terry-lintcode" target="1.5" />
     </bytecodeTargetLevel>
   </component>
