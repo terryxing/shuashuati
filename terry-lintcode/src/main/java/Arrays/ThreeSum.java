@@ -3,16 +3,17 @@ package Arrays;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 
 /**
  * Created by xingtianyi on 11/28/17.
  */
 public class ThreeSum {
 
-    public ArrayList<ArrayList<Integer>> threeSum(int[] numbers) {
+    public List<List<Integer>> threeSum(int[] numbers) {
+        // write your code here
 
-
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         int len = numbers.length;
 
         if(numbers==null || numbers.length<3){
@@ -21,7 +22,7 @@ public class ThreeSum {
 
         Arrays.sort(numbers);
 
-        HashSet<ArrayList<Integer>> hashset = new HashSet<ArrayList<Integer>>();
+        HashSet<List<Integer>> hashset = new HashSet<List<Integer>>();
 
         for (int i = 0; i < len - 2; i++) {
 
@@ -37,7 +38,7 @@ public class ThreeSum {
 
                 if (sum == 0) {
 
-                    ArrayList<Integer> currList = new ArrayList<Integer>();
+                    List<Integer> currList = new ArrayList<Integer>();
                     currList.add(first);
                     currList.add(numbers[p1]);
                     currList.add(numbers[p2]);
@@ -49,7 +50,7 @@ public class ThreeSum {
                 }
 
                 if (sum < 0) {
-                   p1++;
+                    p1++;
                 } else{
                     p2--;
                 }
@@ -60,6 +61,7 @@ public class ThreeSum {
         return result;
 
 
+
     }
 
     public static void main(String[] args) {
@@ -68,7 +70,7 @@ public class ThreeSum {
 
         int[] nums = {-1, 0, 1, 2, -1, -4};
 
-        ArrayList<ArrayList<Integer>> result = x.threeSum(nums);
+//        ArrayList<ArrayList<Integer>> result = x.threeSum(nums);
 
     }
     }
