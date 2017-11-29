@@ -9,43 +9,43 @@ public class TwoStringsAreAnagrams {
 
     public boolean anagram(String s, String t) {
 
-        if(s == null && t == null){
+        if (s == null && t == null) {
             return true;
-        } else if(s == null || t == null){
+        } else if (s == null || t == null) {
             return false;
-        }else if(s.length() != t.length()){
+        } else if (s.length() != t.length()) {
             return false;
         }
 
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 
-        for(char currCh : s.toCharArray()){
+        for (char currCh : s.toCharArray()) {
 
-            if(!map.containsKey(currCh)){
+            if (!map.containsKey(currCh)) {
                 map.put(currCh, 1);
-            }else{
-                map.put(currCh, map.get(currCh)+1);
+            } else {
+                map.put(currCh, map.get(currCh) + 1);
             }
 
         }
 
 
-        for(char currCh : t.toCharArray()){
+        for (char currCh : t.toCharArray()) {
 
-            if(!map.containsKey(currCh)){
+            if (!map.containsKey(currCh)) {
                 return false;
             }
 
-            if(map.get(currCh)>1){
-                map.put(currCh, map.get(currCh)-1);
-            }else{
+            if (map.get(currCh) > 1) {
+                map.put(currCh, map.get(currCh) - 1);
+            } else {
                 map.remove(currCh);
             }
         }
 
-        if(map.size()>0){
+        if (map.size() > 0) {
             return false;
-        }else{
+        } else {
             return true;
         }
 
@@ -54,7 +54,6 @@ public class TwoStringsAreAnagrams {
     public static void main(String[] args) {
 
     }
-
 
 
 }

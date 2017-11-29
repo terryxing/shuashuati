@@ -1,6 +1,6 @@
 package Arrays;
 
-import java.lang.String; /**
+/**
  * Created by IntelliJ IDEA.
  * User  :  txing
  * Data  :  11/28/17
@@ -15,16 +15,16 @@ public class RemoveElement {
 
     public int removeElement(int[] A, int elem) {
 
-        if(A==null || A.length ==0){
+        if (A == null || A.length == 0) {
             return 0;
         }
 
-        int i=0;
+        int i = 0;
         int j;
 
-        for(j=0; j<A.length; j++){
-            if(A[j]!=elem){
-                A[i]=A[j];
+        for (j = 0; j < A.length; j++) {
+            if (A[j] != elem) {
+                A[i] = A[j];
                 i++;
             }
         }

@@ -17,7 +17,7 @@ public class Anagrams {
 
         String a = "";
         String b = "";
-        String[] ab = {"tea","and","ate","eat","den"};
+        String[] ab = {"tea", "and", "ate", "eat", "den"};
 
         Anagrams x = new Anagrams();
         List<String> result = x.anagrams(ab);

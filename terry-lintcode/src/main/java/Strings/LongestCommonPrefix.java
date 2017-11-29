@@ -6,39 +6,38 @@ package Strings;
 public class LongestCommonPrefix {
 
 
-
     public String longestCommonPrefix(String[] strs) {
 
         StringBuilder sb = new StringBuilder();
 
-        if(strs==null || strs.length==0){
+        if (strs == null || strs.length == 0) {
             return "";
         }
 
         int shortestLen = Integer.MAX_VALUE;
         int shortestIndex = 0;
 
-        for(int i=0; i<strs.length; i++){
+        for (int i = 0; i < strs.length; i++) {
             String currStr = strs[i];
-            if(currStr.length()<shortestLen){
+            if (currStr.length() < shortestLen) {
                 shortestLen = currStr.length();
                 shortestIndex = i;
             }
         }
 
-        for(int i=0; i<shortestLen; i++){
+        for (int i = 0; i < shortestLen; i++) {
 
             String currStr = strs[shortestIndex];
 
-            for(int j=0; j<strs.length; j++){
+            for (int j = 0; j < strs.length; j++) {
 
-                if(j==shortestIndex){
+                if (j == shortestIndex) {
                     continue;
                 }
 
                 String toCompare = strs[j];
 
-                if(currStr.charAt(i)!=toCompare.charAt(i)){
+                if (currStr.charAt(i) != toCompare.charAt(i)) {
                     return sb.toString();
                 }
             }
@@ -53,7 +52,7 @@ public class LongestCommonPrefix {
 
         String[] str = {};
 
-        LongestCommonPrefix x =new LongestCommonPrefix();
+        LongestCommonPrefix x = new LongestCommonPrefix();
 
         String result = x.longestCommonPrefix(str);
 

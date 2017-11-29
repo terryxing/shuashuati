@@ -6,46 +6,44 @@ package Strings;
 public class StrStr {
 
     public int strStr(String source, String target) {
-        if(source == null && target == null){
+        if (source == null && target == null) {
             return -1;
-        } else if (source ==null || target==null){
+        } else if (source == null || target == null) {
             return -1;
-        } else if(source.length() ==0 && target.length()==0){
+        } else if (source.length() == 0 && target.length() == 0) {
             return 0;
-        } else if(source.length() !=0 && target.length()==0) {
-            return  0;
-        } else if(source.length() ==0 && target.length()!=0){
+        } else if (source.length() != 0 && target.length() == 0) {
+            return 0;
+        } else if (source.length() == 0 && target.length() != 0) {
             return -1;
         }
 
 
-
-        if(source.length() < target.length()){
+        if (source.length() < target.length()) {
             return -1;
         }
 
 
-
-        if(source.length() == target.length()){
-            if(source.equals(target)){
+        if (source.length() == target.length()) {
+            if (source.equals(target)) {
                 return 0;
-            }else{
+            } else {
                 return -1;
             }
         }
 
-        for(int i=0; i<source.length()-target.length()+1; i++){
+        for (int i = 0; i < source.length() - target.length() + 1; i++) {
 
-            if(source.charAt(i)!=target.charAt(0)){
+            if (source.charAt(i) != target.charAt(0)) {
                 continue;
-            }else{
+            } else {
                 int j;
-                for(j=0; j<target.length(); j++){
-                    if(source.charAt(i+j)!=target.charAt(j)){
+                for (j = 0; j < target.length(); j++) {
+                    if (source.charAt(i + j) != target.charAt(j)) {
                         break;
                     }
                 }
-                if(j==target.length()){
+                if (j == target.length()) {
                     return i;
                 }
             }
