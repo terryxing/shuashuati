@@ -9,6 +9,10 @@ import java.util.HashMap;
 public class CompareStrings {
 
 
+    public static void main(String[] args) {
+
+    }
+
     public boolean compareStrings(String A, String B) {
 
 
@@ -66,10 +70,6 @@ public class CompareStrings {
 
 
         return true;
-    }
-
-    public static void main(String[] args) {
-
     }
 
 }

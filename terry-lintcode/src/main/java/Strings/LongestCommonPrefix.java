@@ -6,6 +6,16 @@ package Strings;
 public class LongestCommonPrefix {
 
 
+    public static void main(String[] args) {
+
+        String[] str = {};
+
+        LongestCommonPrefix x = new LongestCommonPrefix();
+
+        String result = x.longestCommonPrefix(str);
+
+    }
+
     public String longestCommonPrefix(String[] strs) {
 
         StringBuilder sb = new StringBuilder();
@@ -46,16 +56,6 @@ public class LongestCommonPrefix {
         }
 
         return sb.toString();
-    }
-
-    public static void main(String[] args) {
-
-        String[] str = {};
-
-        LongestCommonPrefix x = new LongestCommonPrefix();
-
-        String result = x.longestCommonPrefix(str);
-
     }
 
 }

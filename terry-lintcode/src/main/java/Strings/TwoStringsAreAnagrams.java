@@ -7,6 +7,10 @@ import java.util.HashMap;
  */
 public class TwoStringsAreAnagrams {
 
+    public static void main(String[] args) {
+
+    }
+
     public boolean anagram(String s, String t) {
 
         if (s == null && t == null) {
@@ -48,10 +52,6 @@ public class TwoStringsAreAnagrams {
         } else {
             return true;
         }
-
-    }
-
-    public static void main(String[] args) {
 
     }
 

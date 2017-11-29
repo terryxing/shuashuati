@@ -13,6 +13,10 @@ public class RemoveElement {
 //    The order of elements can be changed, and the elements after the new length don't matter.
 
 
+    public static void main(String[] args) {
+
+    }
+
     public int removeElement(int[] A, int elem) {
 
         if (A == null || A.length == 0) {
@@ -30,11 +34,6 @@ public class RemoveElement {
         }
 
         return i;
-
-    }
-
-
-    public static void main(String[] args) {
 
     }
 

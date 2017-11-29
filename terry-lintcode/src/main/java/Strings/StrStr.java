@@ -5,6 +5,10 @@ package Strings;
  */
 public class StrStr {
 
+    public static void main(String[] args) {
+
+    }
+
     public int strStr(String source, String target) {
         if (source == null && target == null) {
             return -1;
@@ -51,10 +55,6 @@ public class StrStr {
 
 
         return -1;
-
-    }
-
-    public static void main(String[] args) {
 
     }
 
