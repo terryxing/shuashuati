@@ -56,4 +56,16 @@ public class CombinationSum {
             levelResult.remove(levelResult.size()-1);
         }
     }
+
+    public static void main(String[] args) {
+
+        int[] candidates = {2,2,4};
+
+        CombinationSum x= new CombinationSum();
+
+        List<List<Integer>> result = x.combinationSum(candidates, 4);
+
+        System.out.print("ge");
+
+    }
 }
