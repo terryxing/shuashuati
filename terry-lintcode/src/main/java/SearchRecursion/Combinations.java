@@ -13,7 +13,7 @@ public class Combinations {
 
         List<List<Integer>> result = new ArrayList<List<Integer>>();
 
-        if(k>n){
+        if (k > n) {
             return result;
         }
 
@@ -25,18 +25,18 @@ public class Combinations {
 
     }
 
-    private void helper(int i, int n, int k, List<List<Integer>> result, List<Integer> levelResult, int count){
+    private void helper(int i, int n, int k, List<List<Integer>> result, List<Integer> levelResult, int count) {
 
-        if(count==k){
+        if (count == k) {
             result.add(new ArrayList<Integer>(levelResult));
             return;
         }
 
-        for(int x=i; x<=n; x++){
+        for (int x = i; x <= n; x++) {
             levelResult.add(x);
             count++;
-            helper(x+1, n, k, result, levelResult, count);
-            levelResult.remove(levelResult.size()-1);
+            helper(x + 1, n, k, result, levelResult, count);
+            levelResult.remove(levelResult.size() - 1);
             count--;
         }
     }

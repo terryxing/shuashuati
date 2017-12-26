@@ -1,6 +1,5 @@
 package SearchRecursion;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -56,24 +55,24 @@ public class TopologicalSorting {
 
         ArrayList<DirectedGraphNode> result = new ArrayList<DirectedGraphNode>();
 
-        if(graph == null || graph.size()==0){
+        if (graph == null || graph.size() == 0) {
             return result;
         }
 
         Queue<DirectedGraphNode> q = new LinkedList<DirectedGraphNode>();
         Map<DirectedGraphNode, Integer> map = new HashMap<DirectedGraphNode, Integer>();
 
-        for(DirectedGraphNode currNode : graph){
+        for (DirectedGraphNode currNode : graph) {
 
-            if(!map.containsKey(currNode)) {
+            if (!map.containsKey(currNode)) {
                 map.put(currNode, 0);
             }
             ArrayList<DirectedGraphNode> neighbors = currNode.neighbors;
 
-            for(DirectedGraphNode eachNeighbor : neighbors){
-                if(map.containsKey(eachNeighbor)){
-                    map.put(eachNeighbor, map.get(eachNeighbor)+1);
-                }else{
+            for (DirectedGraphNode eachNeighbor : neighbors) {
+                if (map.containsKey(eachNeighbor)) {
+                    map.put(eachNeighbor, map.get(eachNeighbor) + 1);
+                } else {
                     map.put(eachNeighbor, 1);
                 }
             }
@@ -81,9 +80,9 @@ public class TopologicalSorting {
 
         DirectedGraphNode root = null;
 
-        for(DirectedGraphNode currNode : map.keySet()){
-            if(map.get(currNode)==0){
-                if(root==null){
+        for (DirectedGraphNode currNode : map.keySet()) {
+            if (map.get(currNode) == 0) {
+                if (root == null) {
                     root = currNode;
                 }
                 q.add(currNode);
@@ -91,7 +90,7 @@ public class TopologicalSorting {
             }
         }
 
-        if(root == null){
+        if (root == null) {
             return result;
         }
 
