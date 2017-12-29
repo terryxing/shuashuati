@@ -8,15 +8,19 @@ package DynamicProgramming;
  */
 public class LongestIncreasingContinuousSubarray {
 
+    //2d search dp+dfs
+    public int[] xMove = {1, 0, 0, -1};
+    public int[] yMove = {0, 1, -1, 0};
+
     public int longestIncreasingContinuousSubsequence(int[] A) {
         // write your code here
 
-        if(A==null){
+        if (A == null) {
             return 0;
         }
 
         int len = A.length;
-        if(len == 0 || len ==1){
+        if (len == 0 || len == 1) {
             return len;
         }
 
@@ -26,38 +30,32 @@ public class LongestIncreasingContinuousSubarray {
         int count2 = 1;
         int prev1 = A[0];
         int prev2 = A[0];
-        for(int i=1; i<len; i++){
-            if(prev1 > A[i]){
+        for (int i = 1; i < len; i++) {
+            if (prev1 > A[i]) {
                 count1++;
-                if(count1 > result){
-                    result=count1;
+                if (count1 > result) {
+                    result = count1;
                 }
-            }else{
-                count1=1;
+            } else {
+                count1 = 1;
             }
-            prev1=A[i];
+            prev1 = A[i];
 
 
-            if(prev2<A[i]){
+            if (prev2 < A[i]) {
                 count2++;
-                if(count2>result){
-                    result=count2;
+                if (count2 > result) {
+                    result = count2;
                 }
-            }else{
-                count2=1;
+            } else {
+                count2 = 1;
             }
-            prev2=A[i];
+            prev2 = A[i];
         }
 
         return result;
 
     }
-
-
-
-    //2d search dp+dfs
-    public int[] xMove = { 1, 0, 0, -1 };
-    public int[] yMove = { 0, 1, -1, 0 };
 
     public int longestIncreasingContinuousSubsequenceII(int[][] A) {
         // Write your code here
