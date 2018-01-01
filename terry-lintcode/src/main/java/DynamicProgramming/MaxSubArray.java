@@ -11,7 +11,7 @@ public class MaxSubArray {
     public int maxSubArray(int[] nums) {
         // write your code
 
-        if(nums == null || nums.length == 0 ){
+        if (nums == null || nums.length == 0) {
             return 0;
         }
 
@@ -20,14 +20,14 @@ public class MaxSubArray {
         int max = Integer.MIN_VALUE;
         int sum = 0;
 
-        for(int i=0; i<len; i++){
-            sum +=nums[i];
+        for (int i = 0; i < len; i++) {
+            sum += nums[i];
 
-            if (sum>max){
+            if (sum > max) {
                 max = sum;
             }
 
-            if(sum < 0){
+            if (sum < 0) {
                 sum = 0;
             }
 
